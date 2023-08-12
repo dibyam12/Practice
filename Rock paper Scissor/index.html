@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock-Paper-Scissor</title>
+
+    <link  rel="stylesheet" href="style.css">>
+       
+    
+</head>
+<body>
+    <div class="display">
+    <h1>Rock Paper Scissor</h1>
+    <button onclick="
+         computerMoves = computerMove();
+        play('Rock', computerMoves);
+    " class="move-button" > <img src="RPM image/rock-emoji.png" class="move-icon">
+    </button>
+
+    <button onclick="
+         computerMoves = computerMove();
+        play('paper', computerMoves);
+    " class="move-button"><img src="RPM image/paper-emoji.png" class="move-icon">
+    </button>
+
+    <button onclick="
+        let computerMoves = computerMove();
+        play('Scissor', computerMoves);
+    " class="move-button"><img src="RPM image/Scissor-emoji.png" class="move-icon">
+    </button>
+
+<p class="js-result result"></p>
+
+<p class="js-moves moves">
+</p>
+
+<p class="js-score scores">  wins:0, loss:0, tie:0</p>
+
+
+    <button onclick="
+    score.wins=0;
+    score.tie=0;
+    score.loss=0;
+    localStorage.removeItem('score');
+    updateScoreElement();
+   
+    " class="reset-button">Reset Score</button>
+
+    <button class="auto-play-button" onclick=" 
+    autoPlay();
+    "
+    >Auto Play</button>
+
+</div>
+    <script src="RPM.js">
+  
+    </script>
+</body>
+</html>
